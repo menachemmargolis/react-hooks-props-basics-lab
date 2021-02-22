@@ -11,10 +11,15 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home  color ={user.color} username ={user.name} city ={user.city}/>
+      <About bio={user.bio} link1 ={user.links.github} link2 ={user.links.linkedin}/>
     </div>
   );
 }
 
 export default App;
+
+
+
+// Finally, App should also pass down the github and linkedin links to the About component, so that About 
+// can pass those props down to the Links component!
